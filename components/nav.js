@@ -10,7 +10,7 @@
     }
 
     async connectedCallback() {
-        this._base = this.getAttribute('base') || '';
+        this._base = this.getAttribute('base') || '';   // ← сначала получаем base
         const data = await fetch(this._base + 'components/nav.json').then(r => r.json());
         this._data = data;
         this.innerHTML = this.buildHTML(data);
