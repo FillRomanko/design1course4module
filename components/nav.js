@@ -10,7 +10,7 @@
     }
 
     async connectedCallback() {
-        const data = await fetch(this._base + 'components/nav.json').then(r => r.json());
+        const data = await fetch('/components/nav.json').then(r => r.json());
         this._data = data;
         this._base = this.getAttribute('base') || '';
 
