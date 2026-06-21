@@ -25,7 +25,7 @@
     'components/merch.js',
     'styles/merch.css',
 
-    'components/new.js',
+    'components/news.js',
     'styles/news.css',
 
     'data/json/projects.json',
@@ -34,7 +34,7 @@
     '404.html',
 
     'data/json/store.json',
-    'data/components/store.js',
+    'components/store.js',
 
     'data/images/projects1.jpg',
     'data/images/projects2.jpg',
