@@ -1,0 +1,46 @@
+﻿{
+  "logo": {
+    "src": "assets/images/logo.png",
+    "alt": "Логотип",
+    "width": 56,
+    "height": 56
+  },
+  "nav": [
+    {
+      "title": "Главная",
+      "path": "Main/"
+    },
+    {
+      "title": "Мерч",
+      "path": "Store/",
+      "children": [
+        {
+          "title": "Футболки",
+          "path": "Store/",
+          "filters": ["t-shirt"]
+        },
+        {
+          "title": "Толстовки",
+          "path": "Store/",
+          "filters": ["hoodie"]
+        }
+      ]
+    },
+    {
+      "title": "О нас",
+      "path": "About/"
+    },
+    {
+      "title": "Обновления",
+      "path": "Updates/"
+    },
+    {
+      "title": "Партнёры",
+      "path": "Partners/"
+    }
+  ],
+  "loginButton": {
+    "text": "Войти",
+    "path": "login/"
+  }
+}

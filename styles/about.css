@@ -1,0 +1,222 @@
+﻿/* about.css – самопрезентация */
+
+.about-section {
+    display: block;
+    width: 100%;
+    background: var(--white);
+    color: var(--black);
+    padding: 4vh 5vw;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Общие блоки */
+.about-block h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    color: var(--black);
+}
+
+.about-block p,
+.about-block li {
+    font-size: clamp(1rem, 1.6vw, 1.4rem);
+    line-height: 1.6;
+    color: var(--black);
+    opacity: 0.9;
+}
+
+/* Вступление */
+.about-intro .lead {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 400;
+    max-width: 80%;
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.mission-vision h3 {
+    font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--black);
+}
+
+.mission-vision p {
+    font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+    opacity: 0.8;
+    max-width: 90%;
+}
+
+/* Ценности */
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    margin: 1rem 0;
+}
+
+.value-item {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 1.5rem 1.2rem;
+    border-radius: 0.75rem;
+    border-left: 4px solid var(--pink);
+    transition: background 0.2s;
+}
+
+.value-item:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.value-item h3 {
+    font-size: clamp(1.1rem, 1.8vw, 1.6rem);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.value-item p {
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    line-height: 1.5;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Аудитория */
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 2rem;
+    margin-top: 0.5rem;
+}
+
+.audience-grid h4 {
+    font-size: clamp(1rem, 1.4vw, 1.3rem);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: var(--black);
+}
+
+.audience-grid p {
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Что мы предлагаем */
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 2rem;
+    margin-top: 0.5rem;
+}
+
+.offer-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+.offer-icon {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.offer-item h4 {
+    font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: var(--black);
+}
+
+.offer-item p {
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    opacity: 0.8;
+    margin: 0;
+    max-width: 90%;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media screen and (max-width: 1024px) {
+    .about-values {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .mission-vision {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-intro .lead {
+        max-width: 100%;
+    }
+
+    .audience-grid,
+    .offer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-section {
+        padding: 3vh 5vw;
+    }
+
+    .about-container {
+        gap: 2rem;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .audience-grid,
+    .offer-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-block h2 {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+    }
+
+    .about-intro .lead {
+        font-size: clamp(1.1rem, 4vw, 1.4rem);
+    }
+
+    .mission-vision p,
+    .offer-item p {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-section {
+        padding: 2vh 4vw;
+    }
+
+    .about-container {
+        gap: 1.5rem;
+    }
+
+    .value-item {
+        padding: 1rem;
+    }
+}

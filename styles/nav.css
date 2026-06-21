@@ -1,0 +1,250 @@
+﻿/* ===== Контейнер компонента ===== */
+site-navigation {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2vh 2.5vw;
+    background-color: var(--black);
+    transition: background-color 0.3s ease;
+    min-height: 8vh;
+    box-sizing: border-box;
+}
+
+.logo {
+    flex-shrink: 0;
+    width: 5.6vh;
+    height: 5.6vh;
+}
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nav-container {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2vw;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5vw;
+}
+
+.nav-item {
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.4vh 0;
+    font-size: 2vh;
+    font-weight: 400;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--light-green);
+}
+.nav-link.active {
+    color: var(--pink);
+}
+
+.login-btn {
+    flex-shrink: 0;
+    margin-left: 1vw;
+}
+.btn-login {
+    display: inline-block;
+    padding: 0.8vh 2vw;
+    background-color: var(--pink);
+    border-radius: 2vh;
+    font-size: 1.6vh;
+    font-weight: 400;
+    color: var(--white);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+.btn-login:hover {
+    background-color: var(--light-green);
+    color: var(--white);
+}
+
+/* ===== Бургер ===== */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3vh;
+    height: 2.2vh;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 1.5vw;
+    z-index: 10;
+}
+.burger span {
+    display: block;
+    height: 0.3vh;
+    background: var(--white);
+    border-radius: 2px;
+    width: 100%;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Бургер → Крестик */
+site-navigation.menu-open .burger span:nth-child(1) {
+    transform: translateY(0.8vh) rotate(45deg);
+}
+site-navigation.menu-open .burger span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+site-navigation.menu-open .burger span:nth-child(3) {
+    transform: translateY(-0.8vh) rotate(-45deg);
+}
+
+.sub-menu-wrapper {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1a1a1a;
+    border-radius: 0.5vh;
+    padding: 0.5vh 0;
+    min-width: 15vw;
+    box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.3);
+}
+.sub-menu-wrapper .nav-list {
+    flex-direction: column;
+    gap: 0;
+}
+.sub-menu-wrapper .nav-item {
+    white-space: nowrap;
+}
+.sub-menu-wrapper .nav-link {
+    display: block;
+    padding: 0.6vh 1.2vw;
+    font-size: 1.8vh;
+    color: var(--white);
+}
+.sub-menu-wrapper .nav-link:hover {
+    color: var(--light-green);
+}
+.sub-menu-wrapper .nav-link.active {
+    color: var(--pink);
+}
+
+/* ===== Стрелка-дропдаун (скрыта везде, кроме мобильного меню) ===== */
+.dropdown-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.4vh;
+    cursor: pointer;
+    margin-left: 0.3vw;
+    padding: 0;
+    line-height: 1;
+}
+
+/* ===== Адаптивность: оверфлоу → бургер ===== */
+site-navigation.overflow .burger {
+    display: flex;
+}
+site-navigation.overflow .nav-menu {
+    display: none; /* скрываем горизонтальное меню */
+}
+
+/* ===== Мобильное меню (открыто) ===== */
+site-navigation.overflow.menu-open .nav-menu {
+    display: block !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    padding: 2vh 5vw;
+    box-shadow: 0 2vh 4vh rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+site-navigation.menu-open .nav-list {
+    flex-direction: column;
+    gap: 1vh;
+}
+site-navigation.menu-open .nav-item {
+    white-space: normal;
+}
+
+/* Стрелка-дропдаун в мобильном меню */
+site-navigation.menu-open .dropdown-toggle {
+    display: inline-block;
+    font-size: 2vh;
+    padding: 1vh 1.5vw;
+    margin-left: 0.5vw;
+    transition: transform 0.3s ease;
+}
+site-navigation.menu-open .has-children.sub-open > .dropdown-toggle {
+    transform: rotate(180deg);
+}
+
+site-navigation.menu-open .nav-link {
+    position: relative;
+    z-index: 1;
+}
+
+/* Подменю в мобильном режиме */
+site-navigation.menu-open .sub-menu-wrapper {
+    display: none !important;
+    position: static;
+    background: #222;
+    margin-top: 0.5vh;
+    padding-left: 2vw;
+    box-shadow: none;
+}
+site-navigation.menu-open .has-children.sub-open > .sub-menu-wrapper {
+    display: block !important;
+}
+
+/* Отключаем ховер-поведение в мобильном режиме */
+site-navigation.menu-open .has-children:hover > .sub-menu-wrapper {
+    display: none !important;
+}
+site-navigation.menu-open .has-children.sub-open:hover > .sub-menu-wrapper {
+    display: block !important;
+}

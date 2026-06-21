@@ -1,0 +1,9 @@
+﻿{
+  "title": "У нас есть мерч!",
+  "buttonText": "Заказать мерч",
+  "buttonLink": "Store/#sells",
+  "image": {
+    "src": "assets/images/logo.png",
+    "alt": "Мерч Be Whale"
+  }
+}

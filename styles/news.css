@@ -1,0 +1,189 @@
+﻿/* news.css – стили для списка новостей */
+
+news-banner {
+    display: block;
+    width: 100%;
+    background: var(--white);
+    color: var(--black);
+    flex: 1;
+}
+
+/* Основной контейнер – колонка */
+.news-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Заголовок блока (если есть) */
+.news-title {
+    flex-shrink: 0;
+    padding: 1.5vh 4vw 1vh 3vw;
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.02em;
+}
+
+/* Список – занимает всё оставшееся место */
+.news-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+/* Элемент списка – делит пространство поровну на десктопе */
+.news-item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+.news-item:last-child {
+    border-bottom: none;
+}
+
+/* Содержимое элемента – строка (текст + картинка) */
+.news-item-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;   /* выравнивание по верху */
+    width: 100%;
+    padding: 1vh 3vw;
+    gap: 2vw;
+}
+
+
+/* Текстовая часть */
+.news-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0; /* чтобы не вылезало */
+}
+
+.news-date {
+    font-size: clamp(0.7rem, 1.2vw, 1rem);
+    color: var(--dark-green);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.3rem;
+}
+
+.news-item-title {
+    font-size: clamp(1.1rem, 2.2vw, 2.4rem);
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 0.2rem;
+    line-height: 1.2;
+}
+
+.news-description {
+    font-size: clamp(0.85rem, 1.4vw, 1.4rem);
+    color: var(--black);
+    opacity: 0.7;
+    line-height: 1.4;
+    max-width: 90%;
+}
+
+/* Блок картинки */
+.news-image {
+    flex: 0 0 35%;            /* занимает 35% ширины */
+    max-height: 100%;
+    display: flex;
+    align-items: flex-start;   /* картинка прижата к верху */
+    justify-content: center;
+    align-self: flex-start;    /* сам блок прижат к верху */
+}
+
+.news-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-image img {
+    max-width: 100%;
+    max-height: min(100%, 40vh);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.5vh;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+.news-image a:hover img {
+    transform: scale(1.02);
+}
+
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+@media screen and (max-width: 768px) {
+    .news-title {
+        padding: 1.5vh 5vw 0.5vh 5vw;
+        font-size: clamp(1.4rem, 6vw, 2.2rem);
+    }
+
+    .news-list {
+        overflow-y: auto;           /* включаем прокрутку */
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: y mandatory;
+    }
+
+    .news-item {
+        min-height: 0;
+        display: flex;
+        align-items: stretch;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        overflow: hidden;
+    }
+
+    .news-item-content {
+        padding: 2vh 4vw;
+        gap: 3vw;
+        align-items: flex-start;
+    }
+
+    .news-image {
+        flex: 0 0 35%;
+        max-height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        align-self: flex-start;
+        height: 100%;
+    }
+
+    .news-date {
+        font-size: clamp(0.6rem, 2vw, 0.9rem);
+    }
+
+    .news-item-title {
+        font-size: clamp(1rem, 4vw, 1.6rem);
+    }
+
+    .news-description {
+        font-size: clamp(0.75rem, 2.5vw, 1rem);
+        max-width: 100%;
+    }
+
+    .news-image img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+}

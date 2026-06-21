@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Мерч | Be Whale</title>
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/store.css" />
+    <script src="/preload.js" defer data-base="../"></script>
+    <script src="/anchor-scroll.js" defer></script>
+    <link rel="icon" href="../assets/images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<site-navigation base="../"></site-navigation>
+<merch-banner base="../"></merch-banner>
+
+<!-- Основной контейнер каталога -->
+<section id="sells" class="store-section">
+    <div class="store-container">
+        <!-- Фильтры и сортировка -->
+        <aside class="store-filters">
+            <div class="filter-header">
+                <h3>Фильтры</h3>
+                <button class="filter-close" aria-label="Закрыть фильтры">✕</button>
+            </div>
+            <div class="filter-group">
+                <h4>Категории</h4>
+                <div id="category-filters"></div>
+            </div>
+            <div class="filter-group">
+                <h4>Цена</h4>
+                <div class="price-slider">
+                    <input type="range" id="price-min" min="0" max="5000" step="10" value="0" />
+                    <input type="range" id="price-max" min="0" max="5000" step="10" value="5000" />
+                </div>
+                <div class="price-inputs">
+                    <input type="number" id="price-min-input" min="0" step="10" />
+                    <span>—</span>
+                    <input type="number" id="price-max-input" max="5000" step="10" />
+                </div>
+            </div>
+            <div class="filter-group">
+                <h4>Поиск</h4>
+                <input type="text" id="search-input" placeholder="Найти товар..." />
+            </div>
+            <div class="filter-group">
+                <h4>Сортировка</h4>
+                <select id="sort-select">
+                    <option value="default">По умолчанию</option>
+                    <option value="price-asc">Цена ▲</option>
+                    <option value="price-desc">Цена ▼</option>
+                </select>
+            </div>
+            <button id="reset-filters" class="reset-btn">Сбросить фильтры</button>
+        </aside>
+
+        <!-- Список товаров -->
+        <main class="store-catalog">
+            <div class="catalog-header">
+                <h2>Товары</h2>
+                <button class="filter-toggle" aria-label="Показать фильтры">☰</button>
+            </div>
+            <div id="product-grid" class="product-grid"></div>
+        </main>
+
+        <!-- Корзина -->
+        <aside id="cart-panel" class="cart-panel">
+            <div class="cart-header">
+                <h3>Корзина</h3>
+                <button class="cart-close" aria-label="Закрыть корзину">✕</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">Итого: <span id="cart-total-price">0</span> ₽</div>
+                <button id="checkout-btn" class="checkout-btn">Оплатить</button>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <span class="license">Public Domain</span>
+    <span class="copyright">© 2026</span>
+</footer>
+
+<script type="module" src="/components/store.js"></script>
+<script type="module" src="/components/merch.js"></script>
+<script type="module" src="/components/nav.js"></script>
+</body>
+</html>

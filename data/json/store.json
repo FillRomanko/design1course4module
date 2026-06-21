@@ -1,0 +1,36 @@
+﻿{
+  "categories": [
+    { "id": "t-shirt", "name": "Футболки" },
+    { "id": "hoodie", "name": "Толстовки" }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "Футболка с логотипом",
+      "category": "t-shirt",
+      "price": 1500,
+      "image": "data/images/product1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Футболка оверсайз",
+      "category": "t-shirt",
+      "price": 1800,
+      "image": "data/images/product2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Толстовка с капюшоном",
+      "category": "hoodie",
+      "price": 3200,
+      "image": "data/images/product3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Толстовка с принтом",
+      "category": "hoodie",
+      "price": 3500,
+      "image": "data/images/product4.jpg"
+    }
+  ]
+}

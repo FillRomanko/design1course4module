@@ -1,0 +1,26 @@
+﻿{
+  "title": "Последние новости",
+  "items": [
+    {
+      "date": "22/06/2026",
+      "title": "У нас теперь есть мерч!",
+      "description": "купи купи купи",
+      "image": "assets/images/logo.png",
+      "link": "Store/"
+    },
+    {
+      "date": "28/04/2026",
+      "title": "Обновили Does my Vpn work?",
+      "description": "Теперь он работает ещё быстрее!",
+      "image": "data/images/news2.jpg",
+      "link": "https://github.com/FillRomanko/DoesMyVpnWork"
+    },
+    {
+      "date": "25/10/2009",
+      "title": "Never Gonna Give You Up",
+      "description": "Наконец-то легендарный трек вышел и на <a href='https://youtu.be/dQw4w9WgXcQ?si=EUaoLoyy1l3nTvX-'> ютубе<a>",
+      "image": "data/images/news1.jpg",
+      "link": "https://youtu.be/dQw4w9WgXcQ?si=EUaoLoyy1l3nTvX-"
+    }
+  ]
+}

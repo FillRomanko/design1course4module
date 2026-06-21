@@ -1,0 +1,26 @@
+﻿{
+  "title": "Общие проекты",
+  "items": [
+    {
+      "date": "26/03/2026",
+      "title": "Исследование по теме продуктивность",
+      "description": "Книга рассказывающая о том как быть продуктивным",
+      "image": "data/images/projects3.jpg",
+      "link": "https://portfolio.hse.ru/Project/291779"
+    },
+    {
+      "date": "28/12/2025",
+      "title": "Humor Department",
+      "description": "Тематические плакаты об отделении полиции, следящем за чистотой шуток в стране.",
+      "image": "data/images/projects2.jpg",
+      "link": "https://portfolio.hse.ru/Project/284622"
+    },
+    {
+      "date": "26/10/2025",
+      "title": "Humor Department и Museo Sans",
+      "description": "Тематические плакаты об организации, созданная для того, чтобы на улицах звучали только действительно смешные шутки.",
+      "image": "data/images/projects1.jpg",
+      "link": "https://portfolio.hse.ru/Project/268456"
+    }
+  ]
+}
