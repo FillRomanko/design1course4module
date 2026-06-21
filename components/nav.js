@@ -10,10 +10,9 @@
     }
 
     async connectedCallback() {
+        this._base = this.getAttribute('base') || '';
         const data = await fetch(this._base + 'components/nav.json').then(r => r.json());
         this._data = data;
-        this._base = this.getAttribute('base') || '';
-
         this.innerHTML = this.buildHTML(data);
 
         this._header = this.querySelector('.nav-header');
