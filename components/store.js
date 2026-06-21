@@ -471,7 +471,7 @@ function setupEventListeners() {
     });
 
     checkoutBtn.addEventListener('click', () => {
-        window.location.href = '/checkout';
+        window.location.href = '../checkout';
     });
 }
 
