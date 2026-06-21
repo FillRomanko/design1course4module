@@ -1,7 +1,0 @@
-@import url("reset.css");
-@import url("fonts.css");
-
-body{
-    background-image: url("../assets/background.jpg");
-    background-size: cover;
-}
