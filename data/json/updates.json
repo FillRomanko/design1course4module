@@ -5,7 +5,7 @@
       "date": "22/06/2026",
       "title": "У нас теперь есть мерч!",
       "description": "купи купи купи",
-      "image": "assets/images/girl.png",
+      "image": "assets/images/girl.png", // ну пожалуйста, ну обнови ты эту строку в конечном билде хотя бы со второго раза, я прошу тебя
       "link": "Store/"
     },
     {
