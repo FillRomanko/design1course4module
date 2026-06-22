@@ -42,6 +42,15 @@
     'data/images/news1.jpg',
     'data/images/news2.jpg',
 
+     'data/images/hoodie1.png',
+     'data/images/hoodie2.png',
+     'data/images/hoodie3.png',
+     'data/images/t-shirt1.png',
+     'data/images/t-shirt2.png',
+     'data/images/t-shirt3.png',
+     'data/images/t-shirt4.png',
+     'data/images/t-shirt5.png',
+
 
     'assets/audio/NeverGonnaGiveYouUp.mp3',
 ];
