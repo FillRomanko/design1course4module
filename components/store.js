@@ -83,6 +83,9 @@ function updatePriceTrack() {
 async function loadData() {
     try {
         const response = await fetch(STORE_JSON);
+        const text = await response.text();
+        console.log('Сырой ответ:', text); 
+        const data = JSON.parse(text); 
         const data = await response.json();
         categories = data.categories || [];
         allItems = data.items || [];
