@@ -6,31 +6,60 @@
   "items": [
     {
       "id": 1,
-      "name": "Футболка с логотипом",
+      "name": "Чёрная футболка с лого",
       "category": "t-shirt",
-      "price": 1500,
-      "image": "data/images/product1.jpg"
+      "price": 3500,
+      "image": "data/images/t-shirt1.png"
     },
     {
       "id": 2,
-      "name": "Футболка оверсайз",
+      "name": "Чёрное поло с паттерном",
       "category": "t-shirt",
-      "price": 1800,
-      "image": "data/images/product2.jpg"
+      "price": 2800,
+      "image": "data/images/t-shirt2.png"
     },
     {
       "id": 3,
-      "name": "Толстовка с капюшоном",
-      "category": "hoodie",
+      "name": "Белое поло с паттерном",
+      "category": "t-shirt",
       "price": 3200,
-      "image": "data/images/product3.jpg"
+      "image": "data/images/t-shirt3.png"
     },
     {
       "id": 4,
-      "name": "Толстовка с принтом",
+      "name": "Серое поло с паттерном",
+      "category": "t-shirt",
+      "price": 3000,
+      "image": "data/images/t-shirt4.png"
+    },
+    {
+      "id": 5,
+      "name": "Зелёное поло с паттерном",
+      "category": "t-shirt",
+      "price": 3200,
+      "image": "data/images/t-shirt5.png"
+    },
+    {
+      "id": 6,
+      "name": "Чёрное худи с лого",
       "category": "hoodie",
-      "price": 3500,
-      "image": "data/images/product4.jpg"
-    }
+      "price": 5800,
+      "image": "data/images/hoodie1.png"
+    },
+    {
+      "id": 7,
+      "name": "Белое худи с лого",
+      "category": "hoodie",
+      "price": 5800,
+      "image": "data/images/hoodie2.png"
+    },
+    {
+      "id": 8,
+      "name": "Серое худи с лого",
+      "category": "hoodie",
+      "price": 5400,
+      "image": "data/images/hoodie3.png"
+    },
+    
   ]
 }
