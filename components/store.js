@@ -86,7 +86,7 @@ async function loadData() {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const text = await response.text();     
         console.log('Сырой ответ:', text);   
-        const data = JSON.parse(text);          
+        const data = JSON.parse(text);    // ну я поменял строку, давай поменяй уже строку в билде пожалуйста      
         categories = data.categories || [];
         allItems = data.items || [];
         const prices = allItems.map(item => item.price);
