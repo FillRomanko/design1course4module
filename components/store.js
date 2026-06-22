@@ -83,10 +83,10 @@ function updatePriceTrack() {
 async function loadData() {
     try {
         const response = await fetch(STORE_JSON);
-        const text = await response.text();
-        console.log('Сырой ответ:', text); 
-        const data = JSON.parse(text); 
-        const data = await response.json();
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const text = await response.text();     
+        console.log('Сырой ответ:', text);   
+        const data = JSON.parse(text);          
         categories = data.categories || [];
         allItems = data.items || [];
         const prices = allItems.map(item => item.price);
