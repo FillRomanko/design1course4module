@@ -1,5 +1,6 @@
 ﻿const filesToPreload = [
     'assets/images/logo.png',
+     'assets/images/girl.png',
 
     'styles/base.css',
     'styles/reset.css',
